@@ -1,0 +1,7 @@
+Package: backend-api
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: DevOps engineer <DevOps@example.com>
+Description: Go backend API for retrieving user data from PostgreSQL 
