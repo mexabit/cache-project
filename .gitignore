@@ -1,2 +1,5 @@
 data/
 *.deb
+*.rpm
+.venv/
+__pycache__/

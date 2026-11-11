@@ -1,0 +1,10 @@
+redis:
+  host: "127.0.0.1"
+  port: 6379
+
+backend:
+  host: "192.168.96.249"
+  port: 8080
+
+app:
+  port: 5000

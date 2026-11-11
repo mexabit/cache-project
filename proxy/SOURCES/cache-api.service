@@ -1,0 +1,16 @@
+[Unit]
+Description=Cache-api-service
+After=valkey.service
+Wants=valkey.service
+
+[Service]
+Type=simple
+User=cache-api
+DynamicUser=yes
+ExecStart=/usr/bin/python3 /usr/libexec/cache-api/cache-api.py
+Environment=CONFIG_PATH=/etc/cache-api/config.yaml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
