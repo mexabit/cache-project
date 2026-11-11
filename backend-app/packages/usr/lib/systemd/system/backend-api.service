@@ -1,0 +1,16 @@
+[Unit]
+Description=Backend-service
+After=postgresql@16-main.service
+Wants=postgresql@16-main.service
+
+[Service]
+Type=simple
+User=backend-api
+Group=backend-api
+ExecStart=/usr/bin/backend-api
+Environment=CONFIG_PATH=/etc/backend-api/config.yaml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

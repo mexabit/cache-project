@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+if ! id -u backend-api >/dev/null 2>&1; then
+	useradd --no-create-home --system --shell /usr/sbin/nologin --user-group backend-api
+fi
+
+chown :backend-api /etc/backend-api/config.yaml
+
+systemctl daemon-reload
