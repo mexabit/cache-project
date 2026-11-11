@@ -23,7 +23,7 @@ A Flask proxy application with Valkey caching and Go backend integration.
 
 %install
 install -D -m 0644 %{SOURCE0} %{buildroot}%{_libexecdir}/cache-api/cache-api.py
-install -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/cache-api/config-api.yaml
+install -D -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/cache-api/config.yaml
 install -D -m 0644 %{SOURCE2} %{buildroot}%{_unitdir}/cache-api.service
 
 %files
@@ -31,7 +31,7 @@ install -D -m 0644 %{SOURCE2} %{buildroot}%{_unitdir}/cache-api.service
 %dir %{_sysconfdir}/cache-api
 
 %{_libexecdir}/cache-api/cache-api.py
-%config(noreplace) %{_sysconfdir}/cache-api/config-api.yaml
+%config(noreplace) %{_sysconfdir}/cache-api/config.yaml
 %{_unitdir}/cache-api.service
 
 %post
